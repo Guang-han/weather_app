@@ -1,6 +1,57 @@
 @import "settings";
 @import "foundation";
 
+//body{
+//    background-color: bisque;
+//}
+
+
+.BigSun {
+    border: 0px;
+    max-width: 1920px;
+    max-height: 1080px;
+    padding-top: 240px;
+}
+.wday {
+    font-size: 30px;
+    background-color: aqua;
+}
+
+.wdata {
+//    height: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    background-color: gainsboro;
+}
+    
+.row {
+    max-width: 1920px;
+}
+
+//.sun {
+//    padding-top: 180px;
+//    padding-bottom: 180px;
+//}
+@media only screen and (max-width: 50em) {
+ .icon {
+    margin-top:140px;
+//    margin-bottom: 165px;
+ }
+}
+
+
+@media only screen and (min-width: 50em) {
+
+.icon {
+    margin-top:70px;
+//    margin-bottom: 60px;
+}
+}
+
+
+
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
