@@ -2,6 +2,13 @@
 @import "foundation";
 
 
+body{
+    font: sans-serif;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+
 .wday {
     font-size: 50px;
     border-bottom: solid lightgreen;
@@ -14,11 +21,6 @@
 }
 
 
-.row {
-    max-width: 1200px;
-    background-color: rgba(255,255,255,0.6);
-}
-
 @media only screen and (max-width: 50em) {
  .icon {
     margin-top:140px;
@@ -28,7 +30,7 @@
      padding-top: 40px;
 }
  .OP {
-    padding-top: 10px;
+    padding-top: 100px;
 }
 }
 
@@ -43,7 +45,7 @@
     padding-top: 240px;
 }
  .OP {
-    padding-top: 350px;
+    padding-top: 380px;
 }
 }
     
