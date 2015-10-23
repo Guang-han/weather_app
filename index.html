@@ -1,35 +1,122 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="en">
   <head>
-    <title>Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weather</title>
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
     <link rel="stylesheet" href="stylesheets/app.css" />
-  
-</head>
-
-
-<body>
-    <div class="BigSun text-center">
-     <a href="details.html">
-        <figure class="icon clearfix drop-shadow ">
-        <img src="icons/sunny.png"  alt="Sunny">
-    </a>    
-    </div>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.rotate.min.js"></script>
+        <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+<!--    <script language="javascript" type="text/javascript" src="p5.js"></script>-->
+    <script language="javascript" type="text/javascript" src="p5.dom.js"></script>
     
+<!--    <script src="bower_components/modernizr/modernizr.js"></script>-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+			});
+		});
+	</script>
+ 
+   <script>
+   $(document).ready(function(){
+   var angle = 0;
+   setInterval(function(){
+      angle+=3;
+     $("#snow").rotate(angle);
+   },50);
+   })
+</script>
+ 
+  </head>
+  
+  <body>
+  
+<div id="fullpage">
+    <div class="section id=section1 active">
+     <div class="BigSun text-center">
+        <figure id="wth1" class="icon clearfix drop-shadow ">
+        <img src="icons/empty.png">
+         </figure>   
+    </div>
     <div class="OP text-center">
-<form id= "location" action="xxxxxxxx.asp" method="get">
-  <div class="row">
+
+  <div class="row search">
     <div class="small-10 large-4 small-centered columns">
-      <div class="row collapse">
+      <div class="row search collapse buttonparent">
         <div class="small-10 columns">
-          <input type="text" placeholder="Type your location here.">
+          <input id="location" type="text" placeholder="Type your city here.">
         </div>
-        <div class="small-2 columns">
-          <a href="#" class="button postfix">Go</a>
+        <div id="buttons" class="small-2 columns">
+        
         </div>
       </div>
     </div>
   </div>
-</form>   
+
+    </div>
+</div>
+    
+  <div class="section id=section2">
+   <div class="today">Today</div>
+    <div class="row wday text-center"><p id="day1"></p></div>
+    <div class="row clearfix">
+    <div class="small-6 columns text-center sun">
+        <figure id="wth2" class="icon clearfix drop-shadow ">
+         </figure>  
+    </div>
+    <div class="small-6 columns text-center">
+        <div class="row wdata"><p id="city1"></p></div>
+        <div class="row wdata"><p id="date1"></p></div>
+        <div class="row wdata"><p id="wdata1"></p></div>
+      </div>
+    </div>
     </div>
 
-</body>
+  <div class="section id=section3">
+   <div class="today">Tomorrow</div>
+    <div class="row wday text-center"><p id="day2"></p></div>
+    <div class="row clearfix">
+    <div class="small-6 columns text-center sun">
+        <figure id="wth3" class="icon clearfix drop-shadow ">
+         </figure>  
+    </div>
+    <div class="small-6 columns text-center">
+        <div class="row wdata"><p id="city2"></p></div>
+        <div class="row wdata"><p id="date2"></p></div>
+        <div class="row wdata"><p id="wdata2"></p></div>
+      </div>
+    </div>
+    </div>
+ 
+  <div class="section id=section4">
+   <div class="today">The Day After Tomorrow</div>
+    <div class="row wday text-center"><p id="day3"></p></div>
+    <div class="row clearfix">
+    <div class="small-6 columns text-center sun">
+        <figure id="wth4" class="icon clearfix drop-shadow ">
+         </figure>  
+    </div>
+    <div class="small-6 columns text-center">
+        <div class="row wdata"><p id="city3"></p></div>
+        <div class="row wdata"><p id="date3"></p></div>
+        <div class="row wdata"><p id="wdata3"></p></div>
+      </div>
+    </div>
+    </div>
+</div>
+   
+<!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<!--    <script src="bower_components/foundation/js/foundation.min.js"></script>-->
+<!--    <script src="js/app.js"></script>-->
+ <script language="javascript" type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
