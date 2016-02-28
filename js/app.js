@@ -24,7 +24,7 @@ function setup() {
 function lookupCity() {
 event.preventDefault();
     var base_url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=";
-    var app_id = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
+    var app_id = "&appid=7dcd10750b943cba8d8f2356bc1116c0";
     var units = "&units=imperial";
     var myInputBox = select("#location");
     var url = base_url + myInputBox.value() + app_id + units;
@@ -128,19 +128,19 @@ function gotWeather(weather) {
   if (wth3=="Snow"){
       $("#wth4").html('<img src="icons/snow.gif"  alt="Snow">');}
     
-  $("#date1").html(date1.getUTCMonth()+"/"+date1.getUTCDate());
+  $("#date1").html(date1.getUTCMonth()+1+"/"+date1.getUTCDate());
   $("#day1").html(day1);
   $("#wdata1").html(temp1+"°F");
   $("#city1").html(weather.city.name);
     
   $("#day2").html(day2);
   $("#wdata2").html(temp2+"°F");
-  $("#date2").html(date2.getUTCMonth()+"/"+date2.getUTCDate());
+  $("#date2").html(date2.getUTCMonth()+1+"/"+date2.getUTCDate());
   $("#city2").html(weather.city.name);
     
   $("#day3").html(day3);
   $("#wdata3").html(temp3+"°F");
-  $("#date3").html(date3.getUTCMonth()+"/"+date3.getUTCDate());
+  $("#date3").html(date3.getUTCMonth()+1+"/"+date3.getUTCDate());
   $("#city3").html(weather.city.name);
 }
 
